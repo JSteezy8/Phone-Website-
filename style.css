@@ -1,4 +1,4 @@
-/* ===== Design tokens ===== */
+/* Main colours and reusable values */
 :root {
   --bg-dark: #0f172a;
   --bg-body: #f1f5f9;
@@ -18,7 +18,7 @@
   --transition: 0.25s ease;
 }
 
-/* ===== Reset & base ===== */
+/* Basic page setup */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -39,7 +39,7 @@ body {
   flex-direction: column;
 }
 
-/* ===== Interactive navigation ===== */
+/* Navigation bar */
 nav {
   position: sticky;
   top: 0;
@@ -139,7 +139,7 @@ nav a:not(.brand).active::after {
   transform: scaleX(1);
 }
 
-/* ===== Hero (home) ===== */
+/* Home hero section */
 .hero {
   background: linear-gradient(145deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
   color: var(--text-inverse);
@@ -265,7 +265,7 @@ nav a:not(.brand).active::after {
   }
 }
 
-/* ===== Features strip ===== */
+/* Feature boxes */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -316,7 +316,7 @@ nav a:not(.brand).active::after {
   color: var(--text-muted);
 }
 
-/* ===== Section titles ===== */
+/* Section headings */
 .section-title {
   text-align: center;
   padding: 3.5rem 1rem 1.5rem;
@@ -334,7 +334,7 @@ nav a:not(.brand).active::after {
   margin-top: 0.5rem;
 }
 
-/* ===== Products grid ===== */
+/* Product cards */
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -406,7 +406,7 @@ nav a:not(.brand).active::after {
   transform: scale(1.02);
 }
 
-/* ===== CTA section (home) ===== */
+/* Home call-to-action section */
 .cta-section {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: var(--text-inverse);
@@ -448,7 +448,7 @@ nav a:not(.brand).active::after {
   box-shadow: 0 8px 20px var(--accent-glow);
 }
 
-/* ===== Inner page hero (about, etc.) ===== */
+/* Simple page banner */
 .hero-inner {
   background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
   color: var(--text-inverse);
@@ -467,7 +467,7 @@ nav a:not(.brand).active::after {
   margin-top: 0.5rem;
 }
 
-/* ===== Page content ===== */
+/* About page text */
 .page-content {
   max-width: 720px;
   margin: 0 auto;
@@ -479,7 +479,7 @@ nav a:not(.brand).active::after {
   line-height: 1.75;
 }
 
-/* ===== Page title (products, contact, feedback) ===== */
+/* Main page titles */
 body > h1 {
   text-align: center;
   padding: 2.5rem 1rem 1rem;
@@ -488,7 +488,7 @@ body > h1 {
   color: var(--text);
 }
 
-/* ===== Forms ===== */
+/* Contact and feedback forms */
 form {
   max-width: 520px;
   margin: 0 auto 3rem;
@@ -552,7 +552,7 @@ form button[type="submit"]:hover {
   transform: scale(1.01);
 }
 
-/* ===== Footer ===== */
+/* Footer */
 footer {
   background: var(--bg-dark);
   color: var(--text-inverse);
@@ -568,7 +568,7 @@ footer p {
   opacity: 0.85;
 }
 
-/* ===== Link to products (home) ===== */
+/* View all products link */
 .view-all {
   text-align: center;
   padding-bottom: 2rem;
@@ -588,3 +588,111 @@ footer p {
   color: var(--accent-hover);
   gap: 0.5rem;
 }
+
+/* General button style used on normal pages */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px var(--accent-glow);
+}
+
+.btn-secondary {
+  background: #fff;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* Shopping cart area on the products page */
+#cart-box {
+  max-width: 560px;
+  margin: 0 auto 3rem;
+  padding: 1.5rem 2rem;
+}
+
+#cart-list,
+#cart-items {
+  list-style-position: inside;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+}
+
+#cart-list li,
+#cart-items li {
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+#cart-total {
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 0.75rem;
+}
+
+#empty-cart {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+/* Small screen adjustments */
+@media (max-width: 768px) {
+  nav {
+    padding: 0.85rem 1rem;
+  }
+
+  nav .nav-inner {
+    justify-content: center;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  nav a:not(.brand) {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    padding: 4rem 1.25rem;
+  }
+
+  .features {
+    margin-top: 1.5rem;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .form-card {
+    padding: 1.5rem;
+  }
+}
+
