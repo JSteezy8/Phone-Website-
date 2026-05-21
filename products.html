@@ -5,6 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products - iPhone Store</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .cart-box {
+      width: 85%;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #f7f7f7;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .cart-box h2 {
+      margin-bottom: 10px;
+    }
+
+    #cart-items {
+      padding-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    #cart-total {
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
@@ -29,20 +53,29 @@
 
 <div class="products">
   <div class="product">
-    <img src="https://i.pinimg.com/736x/f2/42/a0/f242a096f258332ba96fa51f61360d39.jpg" alt="iPhone 17">
+    <img src="images/iphone-17.jpg" alt="iPhone 17">
     <div class="product-info">
       <h3>iPhone 17</h3>
-      <p class="price">P21800</p>
-      <button>Buy now</button>
+      <p class="price">$1199</p>
+      <button>Add to cart</button>
     </div>
   </div>
 
   <div class="product">
-    <img src="https://i.pinimg.com/736x/f2/42/a0/f242a096f258332ba96fa51f61360d39.jpg" alt="iPhone 15">
+    <img src="images/iphone-15.webp" alt="iPhone 15">
     <div class="product-info">
       <h3>iPhone 15</h3>
-      <p class="price">P8900</p>
-      <button>Buy now</button>
+      <p class="price">$899</p>
+      <button>Add to cart</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="images/iphone-15-pro.jpg" alt="iPhone 15 Pro">
+    <div class="product-info">
+      <h3>iPhone 15 Pro</h3>
+      <p class="price">$999</p>
+      <button>Add to cart</button>
     </div>
   </div>
 
@@ -50,26 +83,8 @@
     <img src="https://i.pinimg.com/1200x/7c/af/8b/7caf8bc803b28c7733c37675b93af431.jpg" alt="iPhone 14 Pro">
     <div class="product-info">
       <h3>iPhone 14 Pro</h3>
-      <p class="price">P9500</p>
-      <button>Buy now</button>
-    </div>
-  </div>
-
-  <div class="product">
-    <img src="https://i.pinimg.com/736x/5b/d9/16/5bd9169d03db749387389ebf4b2e76ab.jpg" alt="iPhone 13">
-    <div class="product-info">
-      <h3>iPhone 13</h3>
-      <p class="price">P6500</p>
-      <button>Buy now</button>
-    </div>
-  </div>
-
-  <div class="product">
-    <img src="https://i.pinimg.com/736x/cb/2a/d0/cb2ad0bbc24149758f88797d22b54ab7.jpg" alt="iPhone 15 Pro">
-    <div class="product-info">
-      <h3>iPhone 15 Pro</h3>
-      <p class="price">P10000</p>
-      <button>Buy now</button>
+      <p class="price">$950</p>
+      <button>Add to cart</button>
     </div>
   </div>
 
@@ -77,52 +92,71 @@
     <img src="https://i.pinimg.com/736x/1f/f5/e8/1ff5e89518a99f734f5673f1580c7cca.jpg" alt="iPhone 14">
     <div class="product-info">
       <h3>iPhone 14</h3>
-      <p class="price">P8000</p>
-      <button>Buy now</button>
+      <p class="price">$799</p>
+      <button>Add to cart</button>
     </div>
   </div>
 
   <div class="product">
-    <img src="https://i.pinimg.com/736x/7b/2d/be/7b2dbe0bea1dbcbd67d78ba86cb7a973.jpg" alt="iPhone 13 Pro">
+    <img src="images/iphone-13-pro.jpg" alt="iPhone 13 Pro">
     <div class="product-info">
       <h3>iPhone 13 Pro</h3>
-      <p class="price">P7500</p>
-      <button>Buy now</button>
+      <p class="price">$720</p>
+      <button>Add to cart</button>
     </div>
   </div>
 
   <div class="product">
-    <img src="https://i.pinimg.com/736x/f2/42/a0/f242a096f258332ba96fa51f61360d39.jpg" alt="iPhone 12 Pro">
+    <img src="images/iphone-13.jpg" alt="iPhone 13">
+    <div class="product-info">
+      <h3>iPhone 13</h3>
+      <p class="price">$650</p>
+      <button>Add to cart</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="images/iphone-12-pro.avif" alt="iPhone 12 Pro">
     <div class="product-info">
       <h3>iPhone 12 Pro</h3>
-      <p class="price">P5800</p>
-      <button>Buy now</button>
+      <p class="price">$580</p>
+      <button>Add to cart</button>
     </div>
   </div>
 
   <div class="product">
-    <img src="https://i.pinimg.com/1200x/7c/af/8b/7caf8bc803b28c7733c37675b93af431.jpg" alt="iPhone 12">
+    <img src="images/iphone-12.jpg" alt="iPhone 12">
     <div class="product-info">
       <h3>iPhone 12</h3>
-      <p class="price">P5300</p>
-      <button>Buy now</button>
+      <p class="price">$520</p>
+      <button>Add to cart</button>
     </div>
   </div>
 
   <div class="product">
-    <img src="https://i.pinimg.com/736x/5b/d9/16/5bd9169d03db749387389ebf4b2e76ab.jpg" alt="iPhone SE">
+    <img src="images/iphone-se.webp" alt="iPhone SE">
     <div class="product-info">
       <h3>iPhone SE</h3>
-      <p class="price">P4200</p>
-      <button>Buy now</button>
+      <p class="price">$430</p>
+      <button>Add to cart</button>
     </div>
   </div>
 </div>
+
+
+<section class="cart-box">
+  <h2>Shopping Cart</h2>
+  <p id="empty-cart">No products added yet.</p>
+  <ul id="cart-items"></ul>
+  <p id="cart-total">Total: $0</p>
+</section>
 
 <footer>
   <p>© 2026 iPhone Store. All rights reserved.</p>
 </footer>
 
 <script src="nav.js"></script>
+<script src="simple-cart.js"></script>
 </body>
 </html>
+
