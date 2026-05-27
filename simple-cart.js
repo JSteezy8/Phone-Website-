@@ -8,7 +8,7 @@ buttons.forEach(function(button) {
     let product = button.closest(".product");
     let name = product.querySelector("h3").innerText;
     let priceText = product.querySelector(".price").innerText;
-    let price = Number(priceText.replace("$", ""));
+    let price = Number(priceText.replace(/[^0-9.]/g, ""));
 
     cart.push({
       name: name,
@@ -25,11 +25,11 @@ function showCart() {
 
   cart.forEach(function(item) {
     let listItem = document.createElement("li");
-    listItem.innerText = item.name + " - $" + item.price;
+    listItem.innerText = item.name + " - P" + item.price;
     cartList.appendChild(listItem);
 
     total = total + item.price;
   });
 
-  cartTotal.innerText = "Total: $" + total;
+  cartTotal.innerText = "Total: P" + total;
 }
